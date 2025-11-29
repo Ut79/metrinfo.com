@@ -1,0 +1,296 @@
+/* Set global background color */
+body {
+    background: #10002B url('/assets/images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #10002B; /* Text color to maintain visibility against dark background */
+    font-family: 'Arial', sans-serif; /* You can change this to your preferred font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Make sure other elements (like headers, footers, etc.) use the glass effect */
+header, footer, .glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+/* For text inside the cards and sections, adjust the text color */
+h1, h2, h3, p {
+    color: #10002B; /* Keep the text color white for contrast */
+}
+
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* background: linear-gradient(135deg, #e0e0e0, #ffffff); */
+    min-height: 100%;
+}
+
+/* Navbar */
+.header {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #F1D6FF;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    background: transparent;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    padding: 0.75rem 2rem;
+    background: #5A189A;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #7B2CBF;
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    margin-top: 4rem;
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Page Header Section */
+.page-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Projects Section */
+.projects {
+    padding: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+/* Blog Posts Section */
+.blog-posts {
+    padding: 2rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-10px);
+}
+
+.post-card .btn-primary {
+    margin-top: 1rem;
+    display: inline-block;
+}
+/* Contact Form Section */
+.contact-form-section {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0077cc;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/*! Styles specific to the blog post page */
+    /* Blog content with subtle glassmorphism effect */
+  .blog-post-page #blog-content {
+    background: rgba(105, 81, 147, 0.9); /* Dark, semi-transparent background */
+    color: #F1D6FF; /* Light text color for content */
+    border-radius: 10px;
+    padding: 40px;
+    backdrop-filter: blur(6px); /* Subtle blur effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Depth for the content card */
+  }
+  
+  /* Optional: Improve scrolling behavior for blog page */
+  .blog-post-page .animate-on-scroll {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
